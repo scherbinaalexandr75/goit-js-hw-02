@@ -7,7 +7,15 @@
 // Якщо знайдено заборонене слово (spam або sale), то функція повертає буль true
 // Якщо в рядку відсутні заборонені слова, функція повертає буль false
 
-function checkForSpam(message) {}
+function checkForSpam(message) {
+  let spam = message.toLowerCase();
+  spam = spam.includes("sale") || spam.includes("spam");
+  if (spam) {
+    return spam;
+  } else {
+    return spam;
+  }
+}
 
 console.log(checkForSpam("Latest technology news")); // false
 console.log(checkForSpam("JavaScript weekly newsletter")); // false
